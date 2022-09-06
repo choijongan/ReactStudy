@@ -1,9 +1,13 @@
 import './App.css';
+import Box from './component/Box';
 
 function App() {
   return (
-    <div className="App">
-     누나짱!!!</div>
+    <div>
+      <Box/>
+      <Box/>
+      <Box/>
+   </div>
   );
 }
 
