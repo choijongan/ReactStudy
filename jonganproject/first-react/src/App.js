@@ -5,6 +5,8 @@ import Box from './component/Box';
 function App() {
   let counter = 0;
   const [counter2, setCounter2] = useState(0);
+  const [value, setValue]= useState(0);
+
   const increase =()=>{
     counter = counter + 1;
     setCounter2(counter2+1); //변수는 동기적, state 바꾸는건 비동기적
