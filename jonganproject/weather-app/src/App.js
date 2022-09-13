@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
 
 
 //1. 앱이 실행되자마자 현재위치기반의 날씨가 보인다.
@@ -9,11 +9,15 @@ import './App.css';
 //5. 현재 위치 기반 날씨버튼을 클릭하면 다시 현재위치 기반으로 돌아온다.
 //6. 데이터를 들고온느 동안 로딩 스피너가 돈다.
 function App() {
-  return (
-    <div>
-      hiiii
-    </div>
-  );
+
+  const getCurrentLocation=()=>{
+    console.log("getCurrentLocation");
+  }
+
+  useEffect(()=>{
+    getCurrentLocation()  
+  },[])
+  return ( <div>hiiii</div> );
 }
 
 export default App;
