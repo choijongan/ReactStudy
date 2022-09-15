@@ -9,10 +9,13 @@ import { useEffect } from 'react';
 //5. 현재 위치 기반 날씨버튼을 클릭하면 다시 현재위치 기반으로 돌아온다.
 //6. 데이터를 들고온느 동안 로딩 스피너가 돈다.
 function App() {
-
   const getCurrentLocation=()=>{
-    console.log("getCurrentLocation");
-  }
+    navigator.geolocation.getCurrentPosition((position)=>{
+      let lat = position.coords.latitude
+      let lon = position.coords.longitude
+        console.log("현재위치",lat,lon);
+    });
+  };
 
   useEffect(()=>{
     getCurrentLocation()  
