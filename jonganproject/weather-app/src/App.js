@@ -27,7 +27,7 @@ function App() {
   useEffect(()=>{
     getCurrentLocation()  
   },[]);
-  return ( <div>hiiii</div> );
+  return <div></div>
 }
 
 export default App;
