@@ -35,18 +35,21 @@ function App() {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7b3ce9c967ff0e9fe57fbdf8463c6ee9&units=metric`
     let response = await fetch(url);
     let data = await response.json();
-    console.log("Data", data);
+    setWeather(data);
   }
-
+  //이 개념이 이번 강의에서 제일 어려웠던 개념. useEffect를 하나로 합치고
+  //if문을 줘서 누르지 않는다면 current를 버튼을 누르면 city데이터를 가져옴.
   useEffect(()=>{
-    getCurrentLocation();  
-  },[]);
+    if(city == ""){
+      getCurrentLocation();  
+    }else{
+      getWeatherByCity();
+    }
+  },[city]);
 
  
 
-  useEffect(()=>{
-    getWeatherByCity();
-  },[city]);
+ 
 
   return (
     <div>
