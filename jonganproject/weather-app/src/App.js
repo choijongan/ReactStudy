@@ -13,6 +13,7 @@ import WeatherButton from './component/WeatherButton';
 //6. 데이터를 들고온느 동안 로딩 스피너가 돈다..
 function App() {
   const [weather,setWeather]= useState(null);
+  const [city,setCity]=useState('');
   const cities = ['Busan', 'New york', 'tokyo', 'seoul']
   const getCurrentLocation=()=>{
     navigator.geolocation.getCurrentPosition((position)=>{
@@ -38,7 +39,7 @@ function App() {
     <div>
         <div class="container">
     <WeatherBox weather={weather}/>
-    <WeatherButton cities={cities}/>
+    <WeatherButton cities={cities} setCity={setCity}/>
         </div>
     </div>
   );

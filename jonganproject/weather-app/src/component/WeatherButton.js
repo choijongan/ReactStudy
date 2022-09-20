@@ -8,7 +8,13 @@ const WeatherButton = ({cities}) => {
         <Button variant="warning">Current Location</Button>
         
         {cities.map((item)=>(
-            <Button variant="warning">{item}</Button>
+            <Button 
+            variant="warning"
+            key={index}
+           onC 
+            >
+              {item}
+            </Button>
         ))}
     </div>
   )
