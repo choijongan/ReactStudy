@@ -11,7 +11,7 @@ const WeatherButton = ({cities,setCity}) => {
             <Button 
             variant="warning"
             key={index}
-           onCick={()=>setCity(item)} 
+           onClick={()=>setCity(item)} 
             >
               {item}
             </Button>
